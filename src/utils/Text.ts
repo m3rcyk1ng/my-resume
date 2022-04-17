@@ -4,5 +4,15 @@ export const text = {
   FRONTEND_DEV: 'Frontend developer',
   DOWNLOAD_CV: 'Download CV',
   CONTACT_ME: 'Contact Me',
-  SCROLL_DOWN: 'Scroll Down →'
+  SCROLL_DOWN: 'Scroll Down →',
+  CORGI_ALT: 'CorgiInSpace',
+  TIME_TO_TELL: 'Time to tell',
+  ABOUT_ME: 'About Me',
+  EXPERIENCE: 'Experience',
+  EXPERIENCE_DESC: 'Frontend: 1 year, SysAdm: 5 years',
+  PROJECTS: 'Projects',
+  PROJECTS_DESC: '10+ completed',
+  EDUCATION: 'Education',
+  EDUCATION_DESC: 'Moscow Polytechnic University & Yandex.Practicum',
+  ABOUT_ALT: 'Corgi developer',
 }

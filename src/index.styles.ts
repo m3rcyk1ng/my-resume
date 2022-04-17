@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: var(--container-width-lg);
   margin: 8rem auto 0;
+  min-height: 80vh;
   
   & > h1, h2, h5 {
     text-align: center;

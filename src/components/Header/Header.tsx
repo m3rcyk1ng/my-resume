@@ -35,7 +35,7 @@ const Header = () => {
           <SocialButton href="https://github.com/m3rcyk1ng" target="_blank"><SocialButtonImg src={InstIcon}/></SocialButton>
         </SocialsContainer>
       <ProfileContainer>
-        <PhotoProfile src={ProfilePhoto} alt="CorgiInSpace" />
+        <PhotoProfile src={ProfilePhoto} alt={text.CORGI_ALT} />
       </ProfileContainer>
       <ScrollDown>{text.SCROLL_DOWN}</ScrollDown>
       </Container>

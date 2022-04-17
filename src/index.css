@@ -26,6 +26,16 @@ h5 {
   font-weight: 500;
 }
 
+section > h2,
+section > h5 {
+  color: var(--greyColorText);
+}
+
+section > h2 {
+  color: var(--blueColor);
+  margin-bottom: 3rem;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background: #13132F url(../src/assets/images/bg-texture.png);
@@ -40,11 +50,12 @@ img {
 }
 
 :root {
-  --transition: all 400ms ease;
+  --transition: all 500ms ease;
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
   --greyColorText: rgba(255, 255, 255, 0.6);
+  --blueColor: #4DB5FF;
 }
 
 .grey-text {
