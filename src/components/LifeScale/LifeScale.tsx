@@ -74,7 +74,7 @@ export const LifeScale: FunctionComponent = () => {
                 <InputContainer>
                   <label htmlFor={'age'}>{t('AGE')}</label>
                   <StyledInput
-                    value={values.age || '1996-09-21'}
+                    value={values.age || '1970-01-31'}
                     type={'date'}
                     name={'age'}
                     id={'age'}

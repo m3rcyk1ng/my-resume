@@ -63,13 +63,13 @@ export const Header: FunctionComponent<any> = ({ timeline }) => {
       .from(nameBlockRef2, 2, { scale: 1.6, ease: Power3.easeOut }, 1.5)
       .from(nameBlockRef3, 1.2, { y: 1200, ease: Power3.easeOut, opacity: 0 }, 2)
       .from(nameBlockRef3, 2, { scale: 1.6, ease: Power3.easeOut }, 2)
-      .from(languageRef, 1.5, { opacity: 0, scale: 0.7 }, 7);
+      .from(languageRef, 1.5, { opacity: 0, scale: 0.7 }, 6);
 
     timeline.from(
       [scrollDownRef, socialsRef],
-      1.5,
+      3,
       { y: 100, ease: Power3.easeOut, opacity: 0 },
-      8,
+      6,
     );
   });
 
