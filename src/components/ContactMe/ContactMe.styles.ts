@@ -47,6 +47,7 @@ export const ContactMeCard = styled(Card)`
   flex-direction: column;
   align-items: center;
   user-select: none;
+  max-width: 18rem;
 
   @media screen and (max-width: 1280px) {
     padding: 1rem 2rem;

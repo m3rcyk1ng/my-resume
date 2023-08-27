@@ -84,7 +84,7 @@ export const ContactMe: FunctionComponent = () => {
                 <ContactImg src={card.icon} />
                 <h5>{t(card.title)}</h5>
                 <StyledCardValue>{t(card.value)}</StyledCardValue>
-                <StyledLink href={card.link}>{t('SEND_A_MESSAGE')}</StyledLink>
+                <StyledLink href={t(card.link)}>{t('SEND_A_MESSAGE')}</StyledLink>
               </ContactMeCard>
             ))}
           </CardsWrapper>

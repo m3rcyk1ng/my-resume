@@ -7,7 +7,7 @@ export const ContactsCards = [
     icon: MailIcon,
     title: 'EMAIL',
     value: 'EMAIL_VALUE',
-    link: 'EMAIL',
+    link: 'EMAIL_LINK',
   },
   {
     icon: TelegramIcon,
