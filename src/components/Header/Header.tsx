@@ -52,8 +52,8 @@ export const Header: FunctionComponent<any> = ({ timeline }) => {
         { y: 0, opacity: 1, scale: 1 },
         4,
       )
-      .fromTo(resumeBtnRef, 1, { x: '-2500', opacity: 0 }, { x: 0, opacity: 1 }, 4)
-      .fromTo(contactBtnRef, 1, { x: '2500', opacity: 0 }, { x: 0, opacity: 1 }, 5);
+      .fromTo(resumeBtnRef, 1, { x: '-2500', opacity: 0 }, { x: 0, opacity: 1 }, 3.5)
+      .fromTo(contactBtnRef, 1, { x: '2500', opacity: 0 }, { x: 0, opacity: 1 }, 4);
 
     timeline
       .from(profilePhotoRef, 5, { y: 1500, ease: Power3.easeInOut, opacity: 0 }, 0)
