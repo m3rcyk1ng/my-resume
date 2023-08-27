@@ -12,10 +12,41 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1 {
   font-size: 2.5rem;
+}
+
+@media (max-width: 440px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  p {
+    font-size: var(--fs-14);
+  }
+  h5 {
+    font-size: var(--fs-11);
+  }
+  h4 {
+    font-size: var(--fs-13);
+  }
+  h3 {
+    font-size: var(--fs-default);
+  }
+}
+
+
+*[id]:before {
+  display: block;
+  content: " ";
+  margin-top: -50px;
+  height: 50px;
+  visibility: hidden;
 }
 
 h1,
@@ -24,9 +55,9 @@ h3,
 h4,
 h5 {
   font-weight: 500;
+  white-space: pre-wrap;
 }
 
-section > h2,
 section > h5 {
   color: var(--greyColorText);
 }
@@ -49,6 +80,7 @@ img {
   object-fit: cover;
 }
 
+
 :root {
   --transition: all 500ms ease;
   --container-width-lg: 75%;
@@ -56,8 +88,33 @@ img {
   --container-width-sm: 90%;
   --greyColorText: rgba(255, 255, 255, 0.6);
   --blueColor: #4DB5FF;
+  --fs-default: 1rem;
+  --fs-20: 1.25rem;
+  --fs-18: 1.125rem;
+  --fs-15: 0.9375rem;
+  --fs-14: 0.875rem;
+  --fs-13: 0.8125rem;
+  --fs-12: 0.75rem;
+  --fs-11: 0.6875rem;
 }
-
 .grey-text {
   color: var(--greyColorText);
+}
+
+/* custom scroll*/
+::-webkit-scrollbar-track {
+  background-color: #363332;
+  box-shadow: 0 0 5px #000 inset;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #4DB5FF;
+  background-image:url('https://yraaa.ru/_pu/24/59610063.png');
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
 }

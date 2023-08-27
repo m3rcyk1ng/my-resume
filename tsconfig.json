@@ -6,6 +6,9 @@
       "dom.iterable",
       "esnext"
     ],
+    "files": [
+      "node_modules/gsap/types/index.d.ts"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

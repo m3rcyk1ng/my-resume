@@ -1,12 +1,29 @@
 import React from 'react';
-import Header from "../Header/Header";
-import AboutMe from "../AboutMe/AboutMe";
+import {
+  Header,
+  AboutMe,
+  Experience,
+  ContactMe,
+  LifeScale,
+  Footer,
+  Navigation,
+  Portfolio,
+} from '../index';
+import { gsap } from 'gsap';
 
 function App() {
+  let tl = gsap.timeline();
+
   return (
-    <div className="App">
-      <Header />
+    <div>
+      <Header timeline={tl} />
       <AboutMe />
+      <Experience />
+      <Portfolio />
+      <LifeScale />
+      <ContactMe />
+      <Footer />
+      <Navigation />
     </div>
   );
 }
