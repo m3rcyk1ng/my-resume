@@ -9,6 +9,7 @@ export const CardsWrapper = styled.div`
   @media screen and (max-width: 650px) {
     flex-direction: column;
     gap: 1.5rem;
+    margin-bottom: 6rem;
   }
 `;
 
