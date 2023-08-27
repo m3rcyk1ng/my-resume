@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useLayoutEffect, useRef } from 'react';
+import React, {FunctionComponent, useLayoutEffect, useRef, useState} from 'react';
 import { Container } from '../../index.styles';
 import {
   ButtonsContainer,
@@ -26,6 +26,7 @@ import { Power3 } from 'gsap';
 export const Header: FunctionComponent<any> = ({ timeline }) => {
   const { t } = useTranslation();
   const [language, setLanguage] = useLocalStorage('language', 'en');
+  const [isLangChange , setIsLangChange] = useState(false);
   let profilePhotoRef: any = useRef(null);
   let resumeBtnRef: any = useRef(null);
   let contactBtnRef: any = useRef(null);
@@ -38,6 +39,7 @@ export const Header: FunctionComponent<any> = ({ timeline }) => {
   let languageRef: any = useRef(null);
 
   useLayoutEffect(() => {
+    if (isLangChange) return;
     timeline.from(nameBlockRef1, 3, {
       y: -100,
       ease: Power3.easeOut,
@@ -72,6 +74,7 @@ export const Header: FunctionComponent<any> = ({ timeline }) => {
   });
 
   function handleLanguageChange() {
+    setIsLangChange(true);
     if (language === 'en') {
       i18n.changeLanguage('ru').then();
       setLanguage('ru');
