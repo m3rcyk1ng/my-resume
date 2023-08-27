@@ -14,6 +14,7 @@ import {
   MaxAgeRow,
   ImageLoading,
   MarginBlock,
+  DescriptionWrapper,
 } from './LifeScale.style';
 import { MiddleContainer } from '../../index.styles';
 import { useFormWithValidation } from '../../utils/hooks';
@@ -28,7 +29,8 @@ export const LifeScale: FunctionComponent = () => {
   const [customWeeksAmount, setCustomWeeksAmount] = useState(0);
   const [isPending, startTransition] = useTransition();
   const year = values.age.slice(0, 4);
-
+  const enteredYear = values.age.substring(0, values.age.indexOf('-'));
+  console.log('enteredYear', enteredYear);
   function handleSubmit(evt: any) {
     evt.preventDefault();
     startTransition(() => {
@@ -59,7 +61,7 @@ export const LifeScale: FunctionComponent = () => {
       );
     });
   };
-
+  console.log('val', values.age);
   return (
     <MiddleContainer>
       <section id={t('LIFE_SCALE')}>
@@ -69,13 +71,13 @@ export const LifeScale: FunctionComponent = () => {
           <Container>
             <h2>{t('BLOCK_AGE')}</h2>
             <MarginBlock />
-            <h4>{t('BLOCK_AGE_DESC')}</h4>
+            <DescriptionWrapper>{t('BLOCK_AGE_DESC')}</DescriptionWrapper>
             <StyledForm onSubmit={handleSubmit} noValidate>
               <InputsContainer>
                 <InputContainer>
                   <label htmlFor={'age'}>{t('AGE')}</label>
                   <StyledInput
-                    value={values.age || '1970-01-31'}
+                    value={enteredYear.length > 4 ? '1970-01-31' : values.age}
                     type={'date'}
                     name={'age'}
                     id={'age'}

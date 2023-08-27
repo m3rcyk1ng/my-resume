@@ -31,6 +31,16 @@ export const MarginBlock = styled.div`
   margin-bottom: 2rem;
 `;
 
+export const DescriptionWrapper = styled.h4`
+  @media (max-width: 1400px) {
+    width: 65%;
+  }
+
+  @media (max-width: 650px) {
+    width: 90%;
+  }
+`;
+
 export const TableContainer = styled.div`
   display: grid;
   gap: 2px;
