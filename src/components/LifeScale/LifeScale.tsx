@@ -27,8 +27,8 @@ export const LifeScale: FunctionComponent = () => {
   const [customBirthday, setCustomBirthday] = useState('');
   const [customWeeksAmount, setCustomWeeksAmount] = useState(0);
   const [isPending, startTransition] = useTransition();
-  const yearRegex = /^(19[789]\d|20[01]\d)/;
   const year = values.age.slice(0, 4);
+
   function handleSubmit(evt: any) {
     evt.preventDefault();
     startTransition(() => {
@@ -106,7 +106,10 @@ export const LifeScale: FunctionComponent = () => {
                   </MaxAgeRow>
                 </InputContainer>
               </InputsContainer>
-              <SubmitButton type={'submit'} disabled={!isValid || !yearRegex.test(year)}>
+              <SubmitButton
+                type={'submit'}
+                disabled={!isValid || !/^(19[789]\d|20[01]\d)/.test(year)}
+              >
                 {t('COUNT_AGE')}
               </SubmitButton>
             </StyledForm>
