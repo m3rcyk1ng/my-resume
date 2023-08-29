@@ -81,6 +81,8 @@ export const LifeScale: FunctionComponent = () => {
                     type={'date'}
                     name={'age'}
                     id={'age'}
+                    min={'1970-01-31'}
+                    max={'2019-01-31'}
                     onChange={handleChange}
                     required
                   />
